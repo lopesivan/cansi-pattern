@@ -1,0 +1,19 @@
+state: {
+     'name':  Watch,
+     'context':  { 'name': DigitalStopWatch,
+                   'struct': [
+                   ],
+                   'include': [
+                   ],
+     },
+
+     'defaultImplementation': {'name': defaultImplementation},
+     'transitionTo':          {'name':transitionTo},
+
+     'start': { 'name':  start,  'to': stop },
+     'stop':  { 'name': stop, 'to': start  },
+
+     'states': [
+
+     ]
+}

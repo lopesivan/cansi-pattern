@@ -1,0 +1,58 @@
+adt: {
+     'name':          trig,
+     'memory_pool':   MemoryPollCustomer,
+     'ptr':           Ptr,
+
+     'include': [
+        { 'name': CustomerStrategy.h },
+        { 'name': Address.h },
+     ],
+
+     'struct': [
+          { 'type': const char*, 'name': name },
+          { 'type': Address, 'name': address },
+          { 'type': size_t, 'name': address },
+          { 'type': Order, 'name': 'orders[42]' },
+     ],
+
+     'ctor': [
+          { 'type': const char*, 'name': name },
+          { 'type': const Address*, 'name': address },
+          { 'type': CustomerPriceStrategy, 'name': priceStrategy },
+     ],
+
+     'class': [
+                { 'name': Order,
+                  'struct': [
+                       { 'type': unsigned long, 'name': orderId },
+                  ],
+                  'include': [
+                  ],
+                },
+                { 'name': Address,
+                  'struct': [
+                       { 'type': const char*, 'name': someStreetName },
+                  ],
+                  'include': [
+                  ],
+                },
+     ]
+}
+
+strategy: {
+     'name':    pitagoras,
+     'method':  change,
+     'ctor': [
+     ],
+
+     'in': [double a, double b],
+     'out': double,
+     'categories':[
+          { 'name': hipo,
+            'ret': a^2+b^2
+          },
+          { 'name': cat,
+            'ret': a^2-b^2
+          },
+     ]
+}
