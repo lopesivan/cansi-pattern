@@ -17,7 +17,7 @@ class TContext_c(Factory):
     def put(self):
         fileName = "%s.c" % self.tmpl.state['context']['name']
         print ("File: %s" % fileName)
-        print self.tmpl
+        print (self.tmpl)
 
     def save(self):
         fileName = "%s.c" % self.tmpl.state['context']['name']
