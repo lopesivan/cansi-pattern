@@ -23,5 +23,6 @@ void transitionToUm (EstadoStatePtr state)
 
     defaultImplementation (state);
     state->dois = doisEstado;
+    /*state->func = doisEstado;*/
 }
 
