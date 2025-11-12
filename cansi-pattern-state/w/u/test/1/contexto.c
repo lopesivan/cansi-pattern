@@ -61,6 +61,27 @@ contextoPtr createEstado (void)
 }
 */
 
+/*
+void statemachine(void)
+{
+    message("** statemachine **");
+
+    contextoPtr instance = NULL;
+
+    if (numberOfObjects < MAX_NO_OF_CONTEXTOS)
+    {
+        instance = &objectPool[numberOfObjects++];
+
+        transitionToTres (&instance->state);
+
+        while(1)
+        {
+            instance->state.func (&instance->state);
+        }
+    }
+}
+*/
+
 void destroyEstado (contextoPtr instance)
 {
     message ("** destroyEstado **");
@@ -92,10 +113,4 @@ void doisEstado (contextoPtr instance)
     */
 
     instance->state.dois (&instance->state);
-}
-
-void proximo (contextoPtr instance) {
-    umEstado(instance);
-    doisEstado(instance);
-    tresEstado(instance);
 }
