@@ -33,28 +33,20 @@ test -n "$DEBUG" && set -x
 # ----------------------------------------------------------------------------
 # Run!
 rm *.c *.h
-ls|
-  grep -vE '(cmake-*|main.c|Makefile|CMakeLists.txt|*.yml|*.sh)'|
-    xargs ls
 
-ADT=/developer/cansi-pattern/cansi-pattern-state
+ADT=/workspace/cansi-pattern/cansi-pattern-state
 APP=${ADT}/w/v/app.py
 YML=state.yml
 
-python ${APP} -s -y ${YML}|sort
-
-gcc -M *.c *.h                       | \
-  sed -e 's/[\\ ]/\n/g'              | \
-  sed -e '/^$/d' -e '/\.o:[ \t]*$/d' | \
-  ctags -L - --c++-kinds=+p --fields=+iaS --extra=+q
+python ${APP} -s -y ${YML} | sort
 
 find . -maxdepth 1 -name \*.c -o -name \*.h |
-xargs astyle \
- --pad-first-paren-out \
- --style=linux \
- -A1 \
- --indent=spaces=4 \
- --convert-tabs
+    xargs astyle \
+        --pad-first-paren-out \
+        --style=linux \
+        -A1 \
+        --indent=spaces=4 \
+        --convert-tabs
 
 rm *.orig
 pwd
