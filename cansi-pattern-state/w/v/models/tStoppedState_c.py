@@ -17,7 +17,7 @@ class TStoppedState_c(Factory):
     def put(self):
         fileName = "%sState.c" %self.tmpl.state['stop']['name'].capitalize()
         print ("File: %s" % fileName)
-        print self.tmpl
+        print (self.tmpl)
 
     def save(self):
         fileName = "%sState.c" %self.tmpl.state['stop']['name'].capitalize()
