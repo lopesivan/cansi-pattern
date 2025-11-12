@@ -4,9 +4,10 @@ project(state)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_C_FLAGS "-Wall -Werror")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-FILE(GLOB MyCSources *.c)
-FILE(GLOB MyCHeaders *.h)
+file(GLOB MyCSources *.c)
+file(GLOB MyCHeaders *.h)
 
 set(SOURCE_FILES ${MyCSources} ${MyCHeaders})
 add_executable(main ${SOURCE_FILES})
