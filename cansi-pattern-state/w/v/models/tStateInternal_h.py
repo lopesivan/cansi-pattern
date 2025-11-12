@@ -17,7 +17,7 @@ class TStateInternal_h(Factory):
     def put(self):
         fileName = "%sStateInternal.h" % self.tmpl.state['name'].capitalize()
         print ("File: %s" % fileName)
-        print self.tmpl
+        print (self.tmpl)
 
     def save(self):
         fileName = "%sStateInternal.h" % self.tmpl.state['name'].capitalize()
