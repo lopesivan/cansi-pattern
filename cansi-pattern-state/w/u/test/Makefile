@@ -22,12 +22,6 @@ clean:
 
 $(OBJECTS): ${HEADERS}
 
-tags: $(SRCS) $(HEADERS)
-	$(CC) -M $<                        | \
-	sed -e 's/[\\ ]/\n/g'              | \
-	sed -e '/^$/d' -e '/\.o:[ \t]*$/d' | \
-	ctags -L - --c++-kinds=+p --fields=+iaS --extra=+q
-
 valgrind:
 	valgrind ./main
 gen:
