@@ -11,15 +11,14 @@
 */
 
 /* Simplify the code by using typedefs for the function pointers. */
-typedef void (*EventUmFunc)    (EstadoStatePtr);
-typedef void (*EventTresFunc)  (EstadoStatePtr);
-typedef void (*EventDoisFunc)  (EstadoStatePtr);
+typedef void (*EventFunc) (EstadoStatePtr);
 
 struct EstadoState
 {
-    EventUmFunc um;
-    EventTresFunc tres;
-    EventDoisFunc  dois;
+    /*EventFunc func;*/
+    EventFunc um;
+    EventFunc tres;
+    EventFunc  dois;
 };
 
 #endif
