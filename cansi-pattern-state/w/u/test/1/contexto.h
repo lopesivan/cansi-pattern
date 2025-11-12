@@ -8,6 +8,13 @@ typedef struct contexto* contextoPtr;
 
 contextoPtr createEstado (void);
 void destroyEstado (contextoPtr instance);
-void proximo (contextoPtr instance);
 
+void umEstado (contextoPtr instance);
+void tresEstado  (contextoPtr instance);
+
+/*
+void statemachine(void);
+*/
+
+void doisEstado (contextoPtr instance);
 #endif
