@@ -17,7 +17,7 @@ class TMain_c(Factory):
     def put(self):
         fileName = "main.c"
         print ("File: %s" % fileName)
-        print self.tmpl
+        print (self.tmpl)
 
     def save(self):
         fileName = "main.c"
