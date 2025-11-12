@@ -14,7 +14,10 @@ main (int argc, char *argv[])
 {
 
     contextoPtr p = createEstado();
-    proximo (p);
+    umEstado (p);
+    doisEstado (p);
+
+    tresEstado (p);
 
     return EXIT_SUCCESS;
 }
