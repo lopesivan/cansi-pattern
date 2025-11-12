@@ -35,7 +35,7 @@ void defaultImplementation (EstadoStatePtr state)
     message ("** defaultImplementation **");
 
     state->um = defaultUm;
-    state->tres = defaultTres;
+    state->tres  = defaultTres;
 
     state->dois = defaultDois;
 }
