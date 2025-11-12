@@ -23,5 +23,6 @@ void transitionToDois (EstadoStatePtr state)
 
     defaultImplementation (state);
     state->tres = tresEstado;
+    /*state->func = tresEstado;*/
 }
 
