@@ -17,7 +17,7 @@ class TMessage_h(Factory):
     def put(self):
         fileName = "message.h"
         print ("File: %s" % fileName)
-        print self.tmpl
+        print (self.tmpl)
 
     def save(self):
         fileName = "message.h"
