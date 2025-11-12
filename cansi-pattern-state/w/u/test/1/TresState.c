@@ -23,5 +23,6 @@ void transitionToTres (EstadoStatePtr state)
 
     defaultImplementation (state);
     state->um = umEstado;
+    /*state->func = umEstado;*/
 }
 
